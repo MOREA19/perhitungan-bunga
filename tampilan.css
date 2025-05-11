@@ -1,0 +1,215 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', Helvetica, sans-serif;
+    background-image: url(backgrounds/bg\ biru.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Header */
+header {
+    background-color: #0f2b4c;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav a {
+    color: white;
+    margin-left: 1rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+header nav a:hover {
+    color: #a3c6ff;
+    transition: color 0.3s;
+}
+
+/* Hero */
+.hero-section {
+    background-image: url('backgrounds/bg biru.png');
+    background-size: cover;
+    background-position: center;
+    padding: 150px 20px;
+    color: #fff;
+    text-align: center;
+    font-size: 165%;
+}
+
+.hero p {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    color: #a8bed2;
+}
+
+/* Section umum */
+.section {
+    background-color: #dbe7f5;
+    padding: 4rem 2rem;
+}
+
+.section h2 {
+    color: #0f2b4c;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.section p {
+    max-width: 600px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Section pengertian */
+.section.pengertian {
+    background-image: url('backgrounds/bg bodas.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 20px;
+    color: #0A0A0A;
+}
+
+.section.pengertian.center-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px; /* lebih ringan dari sebelumnya */
+    padding-bottom: 80px;
+}
+
+.section.pengertian.center-text h2 {
+    font-size: 2.5rem;     /* sebelumnya 2rem */
+    font-weight: 700;      /* lebih tegas */
+    color: #0f2b4c;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.section.pengertian.center-text p {
+    font-size: 1.1rem;         /* lebih besar dari default (biasanya 1rem) */
+    max-width: 900px;          /* biar nggak melebar ke samping */
+    line-height: 1.8;          /* buat lebih enak dibaca */
+    color: #333;
+    text-align: center;        /* biar rapi di tengah */
+}
+
+
+/* Materi */
+.materi {
+    max-width: 700px;
+    margin: 1rem auto;
+    padding: 0 2rem;
+    background-color: #f4f7fb;
+    color: #0f2b4c;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.6s ease, opacity 0.6s ease, padding 0.3s ease;
+}
+
+.materi.show {
+    max-height: 1000px;
+    opacity: 1;
+    padding: 2rem;
+}
+
+/* Pilihan jenis bunga */
+.choice-section {
+    background-color: #0f2b4c;
+    color: white;
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.choice-section div {
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.choice-section div:hover {
+    transform: scale(1.05);
+    color: #a3c6ff;
+}
+
+/* Kalkulator */
+.kalkulator-container {
+    background-color: #f4f7fb;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+.kalkulator-container h2 {
+    font-size: 2rem;
+    color: #0f2b4c;
+    margin-bottom: 1rem;
+}
+
+.kalkulator-container label {
+    font-weight: 600;
+    color: #0f2b4c;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.kalkulator-container input, .kalkulator-container select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.kalkulator-container input:focus, .kalkulator-container select:focus {
+    border-color: #0f2b4c;
+    outline: none;
+}
+
+.kalkulator-container button {
+    background-color: #0f2b4c;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.kalkulator-container button:hover {
+    background-color: #1c3a59;
+}
+
+#hasil {
+    font-size: 1.2rem;
+    color: #0f2b4c;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+    background-color: #e0f7fa;
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+    width: 100%;
+}
+

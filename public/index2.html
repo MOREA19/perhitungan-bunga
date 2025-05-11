@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator Bunga</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../tampilan.css" />
+</head>
+<body class="font-[Poppins] bg-gray-50 text-gray-800 min-h-screen">
+    <!-- Header -->
+    <header class="header">
+        <div class="header-logo">
+            <img src="../aset/gedung.png" alt="logo gedung" style="height: 50px; vertical-align: middle;">
+        </div>
+        <nav class="header-nav">
+            <a href="index.html" class="nav-link">Tentang Kami</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1>Hitung Bunga Tabungan dan Investasi dengan Mudah</h1>
+        <p>Satu website untuk bantu kamu pahami pertumbuhan tabungan dan investasi secara tepat.</p>
+    </section>
+
+    <!-- Pengertian -->
+    <div class="section pengertian center-text">
+        <h2>Apa Itu Bunga?</h2>
+        <p>Bunga adalah imbal hasil yang diperoleh dari peminjaman uang atau modal dalam jangka waktu tertentu. Dalam konteks keuangan, bunga diberikan sebagai kompensasi kepada pemberi pinjaman atas penggunaan dan risiko dari dana yang dipinjamkan. Bunga biasanya dihitung berdasarkan persentase tertentu dari jumlah pinjaman awal (modal pokok) dan dapat dikenakan dalam berbagai sistem perhitungan, tergantung pada kesepakatan antara pihak-pihak yang terlibat.</p>
+    </div>
+
+    <!-- Pilihan -->
+    <div class="choice-section">
+        <div onclick="toggleMateri('materiTunggal')">Bunga Tunggal</div>
+        <div onclick="toggleMateri('materiMajemuk')">Bunga Majemuk</div>
+        <div onclick="toggleMateri('perbandingan')">Perbandingan</div>
+        <div onclick="toggleMateri('kalkulator')">Kalkulator Bunga</div>
+    </div>
+
+    <div id="materiTunggal" class="materi" style="display: none;">
+        <h3>Apa itu Bunga Tunggal?</h3>
+        <p>Bunga tunggal adalah bunga yang dihitung dari besarnya modal pokok untuk seluruh periode transaksi.</p>
+        <p style="margin-top:1em;">
+            Bunga tunggal dihitung hanya berdasarkan pokok awal dengan jumlah bunga yang tetap setiap periode dan tanpa akumulasi bunga. Jenis bunga ini biasanya digunakan untuk pinjaman atau investasi jangka pendek karena perhitungannya sederhana dan mudah dipahami. Namun, bunga tunggal kurang optimal untuk investasi jangka panjang karena bunga yang diperoleh tidak bertambah signifikan.<br><br>
+            Sedangkan bunga majemuk melibatkan perhitungan bunga dari pokok awal ditambah bunga yang sudah terakumulasi dari periode sebelumnya, sehingga jumlah bunga yang diperoleh bertambah setiap periode dan pertumbuhannya bersifat eksponensial. Bunga majemuk cocok untuk investasi atau pinjaman jangka panjang karena memberikan keuntungan lebih besar seiring waktu. Namun, jika digunakan untuk pinjaman, bunga majemuk dapat menyebabkan total utang meningkat pesat jika tidak segera dibayar.<br><br>
+            Dalam praktik, bunga tunggal sering diterapkan pada pinjaman mikro atau deposito jangka pendek, sementara bunga majemuk banyak digunakan pada tabungan, deposito jangka panjang, dan instrumen investasi lainnya. Untuk pinjaman, bunga tunggal biasanya lebih menguntungkan karena bunga yang dibayar lebih kecil. Sebaliknya, untuk investasi atau tabungan, bunga majemuk lebih menguntungkan karena bunga terus bertambah seiring waktu.
+        </p>
+    </div>
+
+    <div id="materiMajemuk" class="materi" style="display: none;">
+        <h3>Apa itu Bunga Majemuk?</h3>
+        <p>Bunga majemuk adalah bunga yang dihitung tidak hanya dari modal pokok, tetapi juga dari akumulasi bunga periode sebelumnya.</p>
+        <p style="margin-top:1em;">
+            Bunga majemuk memiliki ciri khas yaitu perhitungannya melibatkan pokok awal serta bunga yang telah terakumulasi dari periode sebelumnya. Jumlah bunga yang didapatkan atau dibayarkan setiap periode akan semakin besar seiring waktu, karena bunga sebelumnya ikut dihitung. Pertumbuhan nilai investasi atau utang bersifat eksponensial, bukan straight seperti bunga tunggal. Sering digunakan pada investasi jangka panjang, tabungan, atau pinjaman jangka panjang.
+        </p>
+    </div>
+
+    <div id="perbandingan" class="materi" style="display: none;">
+        <h3>Perbandingan Bunga Tunggal dan Bunga Majemuk</h3>
+        <p>
+            <b>Bunga Tunggal:</b> Dihitung hanya dari pokok awal, bunga tetap setiap periode, tidak ada akumulasi bunga. Cocok untuk pinjaman/investasi jangka pendek.<br><br>
+            <b>Bunga Majemuk:</b> Dihitung dari pokok awal + bunga terakumulasi, bunga bertambah setiap periode, pertumbuhan eksponensial. Cocok untuk investasi/pinjaman jangka panjang.<br><br>
+            <b>Kesimpulan:</b> Bunga tunggal lebih sederhana dan menguntungkan untuk pinjaman jangka pendek, sedangkan bunga majemuk lebih menguntungkan untuk investasi jangka panjang karena bunga terus bertambah seiring waktu.
+        </p>
+        <p style="margin-top:1em;">
+            <b>Contoh Praktis dalam Kehidupan Sehari-hari</b><br>
+            <b>Bunga Tunggal:</b> Misalnya, Anda meminjam uang di koperasi sebesar Rp 2.000.000 dengan bunga tunggal. Setiap bulan, bunga yang harus dibayar akan selalu sama, karena dihitung dari jumlah pinjaman awal. Jadi, meskipun Anda sudah membayar bunga di bulan-bulan sebelumnya, jumlah bunga yang dibayar di bulan berikutnya tidak berubah.<br>
+            <b>Bunga Majemuk:</b> Jika Anda menabung di bank dengan sistem bunga majemuk, bunga yang Anda dapatkan setiap bulan akan bertambah besar. Hal ini terjadi karena bunga dari bulan sebelumnya ditambahkan ke saldo, sehingga perhitungan bunga selanjutnya didasarkan pada total saldo yang telah bertambah.
+        </p>
+        <p style="margin-top:1em;">
+            <b>Keuntungan dan Kekurangan</b><br>
+            <b>Bunga Tunggal</b><br>
+            Keuntungan: Perhitungan sederhana, mudah dipahami, dan cocok untuk perencanaan keuangan jangka pendek.<br>
+            Kelemahan: Kurang optimal untuk investasi jangka panjang karena hasil bunga tidak mengalami pertumbuhan yang signifikan.<br><br>
+            <b>Bunga Majemuk</b><br>
+            Keuntungan: Sangat menguntungkan untuk investasi jangka panjang karena bunga terus bertambah dan berkembang. Salah satu kelemahan adalah saat digunakan untuk pinjaman, total utang dapat meningkat pesat apabila tidak segera dibayar.
+        </p>
+        <p style="margin-top:1em;">
+            <b>Penerapan di Dunia Keuangan</b><br>
+            Bunga tunggal sering ditemukan pada pinjaman mikro, kredit usaha rakyat, atau deposito berjangka pendek. Bunga majemuk biasanya diterapkan dalam berbagai produk keuangan seperti tabungan, deposito jangka panjang, obligasi, dan instrumen investasi lainnya.
+        </p>
+        <!-- <p style="margin-top:1em;">
+            <b>Tips Memilih Jenis Bunga</b><br>
+            Untuk pinjaman, bunga tunggal biasanya lebih menguntungkan karena total bunga yang dibayar cenderung lebih kecil. Bunga majemuk memberikan keuntungan lebih pada investasi atau tabungan karena nilai bunganya meningkat secara bertahap dari waktu ke waktu.<br><br>
+            <b>Pokok</b> adalah dana awal yang digunakan dalam pinjaman atau penanaman modal.<br>
+            <b>Periode</b> merujuk pada waktu tertentu seperti bulan atau tahun yang menjadi acuan dalam perhitungan bunga.<br>
+            <b>Akumulasi</b>: Penambahan hasil bunga ke pokok sehingga menjadi dasar perhitungan bunga selanjutnya (khusus pada bunga majemuk).
+        </p> -->
+    </div>
+
+    <!-- Kalkulator -->
+    <div id="kalkulator" class="materi kalkulator-container" style="display: none;">
+        <h2>Kalkulator Bunga</h2>
+        <label for="jenis">Jenis Bunga:</label><br>
+        <select id="jenis">
+            <option value="tunggal">Bunga Tunggal</option>
+            <option value="majemuk">Bunga Majemuk</option>
+        </select><br><br>
+        <label for="modal">Modal Awal (Rp):</label><br>
+        <input type="number" id="modal"><br>
+        <label for="bunga">Persentase Bunga (% per periode):</label><br>
+        <input type="number" id="bunga"><br>
+        <label for="periode">Jumlah Periode:</label><br>
+        <input type="number" id="periode"><br>
+        <button onclick="hitungBunga()">Hitung</button>
+        <div id="hasil" style="margin-top: 20px; font-weight: bold;"></div>
+    </div>
+
+    <script>
+        function toggleMateri(id) {
+            const semuaMateri = document.querySelectorAll('.materi');
+            semuaMateri.forEach(div => {
+                if (div.id === id) {
+                    if (!div.classList.contains('show')) {
+                        div.style.display = 'block';
+                        setTimeout(() => {
+                            div.classList.add('show');
+                            div.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }, 10);
+                    } else {
+                        div.classList.remove('show');
+                        setTimeout(() => {
+                            div.style.display = 'none';
+                        }, 500);
+                    }
+                } else {
+                    div.classList.remove('show');
+                    setTimeout(() => {
+                        div.style.display = 'none';
+                    }, 500);
+                }
+            });
+        }
+        function hitungBunga() {
+            const jenis = document.getElementById("jenis").value;
+            const modal = parseFloat(document.getElementById("modal").value);
+            const bunga = parseFloat(document.getElementById("bunga").value) / 100;
+            const periode = parseFloat(document.getElementById("periode").value);
+            let hasil = 0;
+            if (isNaN(modal) || isNaN(bunga) || isNaN(periode)) {
+                document.getElementById("hasil").innerText = "Mohon isi semua bidang dengan angka.";
+                return;
+            }
+            if (jenis === "tunggal") {
+                hasil = modal + (modal * bunga * periode);
+            } else if (jenis === "majemuk") {
+                hasil = modal * Math.pow(1 + bunga, periode);
+            }
+            document.getElementById("hasil").innerText = "Total nilai akhir: Rp " + hasil.toLocaleString("id-ID", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        }
+    </script>
+</body>
+</html>
